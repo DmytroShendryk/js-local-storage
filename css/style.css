@@ -1,0 +1,59 @@
+.shop-cat:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.cat-product{
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 9%;
+}
+
+.product-list{
+    display: none;
+}
+
+.product{
+    list-style: none;
+}
+
+.product:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.product-price{
+    display: block;
+    position: absolute;
+    left: 63%;
+    top: 9%;
+}
+
+.prodprice-item{
+    display: none;
+}
+
+form small {
+    color: red;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.has-error {
+    border: 1px solid red;
+}
+
+.singup {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(62%, -5%);
+}
+
+.d-block{
+    display: block;
+}

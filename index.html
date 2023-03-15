@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+            <form action="singup.php" class="singup">
+            <div class="field">
+                <label for="name">Name:</label>
+                <input class="required" type="text" id="name" name="name" placeholder="name">
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="select">Select your city:</label>
+                <select name="select" id="select">
+                    <option value="kyiv">Kyiv</option>
+                    <option value="kharkiv">Kharkiv</option>
+                    <option value="lviv">Lviv</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="select">Select NP office:</label>
+                <select name="select" id="select">
+                    <option value="office1">Pryvokzalna, 12, Kyiv</option>
+                    <option value="office2">Ludvig Svoboda ave, 35, Kharkiv</option>
+                    <option value="office3">Vyacheslav Chornovol ave, 67g, Lviv</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input class="required" type="email" id="email" name="email" placeholder="email">
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="text">Message:</label>
+                <input class="" type="text" id="text" name="text" placeholder="text">
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="options">quantity of products</label>
+                <br><input class="" type="radio" id="radio1" name="quantity" value="1">
+                <label for="radio1">1</label>
+                <input class="" type="radio" id="radio2" name="quantity" value="2">
+                <label for="radio2">2</label>
+                <input class="" type="radio" id="radio3" name="quantity" value="3">
+                <label for="radio3">3</label>
+                <input class="" type="radio" id="radio4" name="quantity" value="4">
+                <label for="radio4">4</label>
+                <input class="" type="radio" id="radio5" name="quantity" value="5">
+                <label for="radio5">5</label>
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="options">Method of payment:</label>
+                <input class="" type="checkbox" id="checkbox" name="after">
+                <label for="checkbox">After delivery</label>
+                <input class="" type="checkbox" id="checkbox" name="card">
+                <label for="checkbox">Card</label>
+                <small></small>
+            </div>
+            <button class="form-btn">Sing Up</button>
+        </form>
+        <div class="user-order">
+            <button class="order">my orders</button>
+        </div>
+    <div class="container">
+        <h1>eshop</h1>
+        <ol class="shop-categories">
+            <li class="shop-cat"data-id="phones">phones</li>
+            <li class="shop-cat"data-id="tv">tv</li>
+            <li class="shop-cat"data-id="laptops">laptops</li>
+        </ol>
+        <div class="cat-product">
+            <ul class="product-list" data-id="phones">
+                <li class="product" data-prod="0">"Iphone 14"</li>
+                <li class="product" data-prod="1">"Samsung Galaxy S23"</li>
+                <li class="product" data-prod="2">"Xiaomi Redmi Note 10 pro"</li>
+            </ul>
+            <ul class="product-list"data-id="tv">
+                <li class="product" data-prod="3">"Samsung UE50AU7100UXUA"</li>
+                <li class="product" data-prod="4">"Телевізор LG 43UQ80006LB"</li>
+                <li class="product" data-prod="5">"Philips 55PUS7607/12"</li>
+            </ul>
+            <ul class="product-list"data-id="laptops">
+                <li class="product" data-prod="6">"Lenovo IdeaPad Gaming 3 15IHU6"</li>
+                <li class="product" data-prod="7">"Apple MacBook Air 13'"</li>
+                <li class="product" data-prod="8">"ASUS Vivobook 14X OLED"</li>
+            </ul>
+        </div>
+        <div class="product-price">
+            <ul class="price">
+                <li class="prodprice-item">
+                    <span data-prod="0">"Iphone 14"</span>
+                    <br><span>price: 50.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="1">"Samsung Galaxy S23"</span>
+                    <br><span>price: 40.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="2">"Xiaomi Redmi Note 10 pro"</span>
+                    <br><span>price: 10.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="3">"Samsung UE50AU7100UXUA"</span>
+                    <br><span>price: 19.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="4">"LG 43UQ80006LB"</span>
+                    <br><span>price: 18.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="5">"Philips 55PUS7607/12"</span>
+                    <br><span>price: 21.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="6">"Lenovo IdeaPad Gaming 3 15IHU6"</span>
+                    <br><span>price: 30.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="7">"Apple MacBook Air 13"</span>
+                    <br><span>price: 45.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+                <li class="prodprice-item">
+                    <span data-prod="8">"ASUS Vivobook 14X OLED"</span>
+                    <br><span>price: 44.000 uah</span>
+                    <br><button class="buy-product">Buy</button>
+                </li>
+        </div>
+        <div class="form-data"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -117,7 +117,7 @@ function loadOrders() {
 formBtn.forEach(elem => elem.addEventListener('click', (event)=>{
   const orderData = {
     name: formName.value,
-    product: parseInt(event.target.dataset.prod) || 1,
+    product: parseInt(event.target.dataset.prod),
     quantity: form.elements['quantity'].value,
   };
   order.push(orderData);

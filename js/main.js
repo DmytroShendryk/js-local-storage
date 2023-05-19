@@ -2,7 +2,7 @@ let catProd = document.querySelectorAll('.product-list');
 const productElements = document.querySelectorAll('.product');
 const prodPriceElements = document.querySelectorAll('.prodprice-item');
 const btn = document.querySelectorAll('.buy-product');
-const formBtn = document.querySelectorAll('.form-btn')
+const formBtn = document.querySelector('.form-btn')
 const form = document.querySelector('.singup');
 const formName = document.getElementById('name');
 const requiredFields = form.querySelectorAll('.required');
@@ -40,8 +40,14 @@ productElements.forEach((productElement) => {
     prodPriceElements.forEach((prodPriceElement, index) => {
       prodPriceElement.classList.toggle('d-block', index === prodId - 0);
     });
+
+    // Save the selected product to localStorage
+    localStorage.setItem('selectedProduct', prodId);
   });
-})
+});
+
+// Load the selected product from localStorage
+const selectedProduct = localStorage.getItem('selectedProduct');
 
 btn.forEach(elem => elem.addEventListener('click', (event)=>{
   //event.preventDefault();
@@ -114,16 +120,20 @@ function loadOrders() {
   }
 }
 
-formBtn.forEach(elem => elem.addEventListener('click', (event)=>{
+function addOrderToLocalStorage() {
   const orderData = {
     name: formName.value,
-    product: parseInt(event.target.dataset.prod),
+    product: parseInt(localStorage.getItem('selectedProduct')),
     quantity: form.elements['quantity'].value,
   };
   order.push(orderData);
   localStorage.setItem('orders', JSON.stringify(order));
   form.classList.add('d-block');
-}));
+}
+
+formBtn.addEventListener('click', (event) => {
+  addOrderToLocalStorage();
+});
 
 orderBtn.addEventListener('click', (event) => { 
   catProd.forEach(cat => cat.classList.remove('d-block'));
@@ -131,8 +141,8 @@ orderBtn.addEventListener('click', (event) => {
   const savedOrder = JSON.parse(localStorage.getItem('orders'));
   if (savedOrder && savedOrder.length > 0) {
     savedOrder.forEach((orderData, index) => {
-      const productEl = productElements[orderData.product - 1];
-      const productName = productEl ? productEl.textContent.trim() : (orderData.product === 1 ? '' : 'Unknown product');
+      const productEl = productElements[orderData.product - 0];
+      const productName = productEl ? productEl.textContent.trim() : (orderData.product === 0 ? '' : 'Unknown product');
       const div = document.createElement('div');
       div.classList.add('order-item');
       div.innerHTML = `<div class="order-details">
